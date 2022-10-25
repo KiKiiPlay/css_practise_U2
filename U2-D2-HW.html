@@ -38,6 +38,10 @@
 
       .blog-footer .text-center a:nth-child(2) {
       }
+
+      .newColor {
+        color: red;
+      }
     </style>
     <meta charset="utf-8" />
     <meta
@@ -447,10 +451,25 @@
     <a href="#" class="float-right mb-3 mr-3">Back to top</a>
     <script>
       /* JS Exercises should go here */
-      // Write a JavaScript functionality to add a new link into the
-      // Write a JavaScript functionality to change the color of the main heading title
-      // Write a JavaScript functionality to change the background of the jumbotron
+      // Write a JavaScript functionality to add a new link into the navbar
+      const newNavbarEl = document.createElement("span");
+      const mainNavbar = document.querySelector("nav");
+      const addNewElMAinNav = function () {
+        newNavbarEl.innerText = "newELement";
+        mainNavbar.appendChild(newNavbarEl);
+      };
 
+      // Write a JavaScript functionality to change the color of the main heading title
+      const heading = document.querySelector("h1");
+      const changeColor = function () {
+        heading.classList.add("newColor");
+      };
+
+      // Write a JavaScript functionality to change the background of the jumbotron
+      let jumbotron = document.querySelector(".jumbotron");
+      const changeBackground = function () {
+        jumbotron.style.backgroundColor = "blue";
+      };
       // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
 
       // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
